@@ -17,13 +17,6 @@
 /.next/
 /out/
 
-# Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
 # production
 /build
 
@@ -37,24 +30,9 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# OS / editor
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
+# env files (can opt-in for committing if needed)
+.env*
 
-# Supabase local (if used)
-.supabase/
-
-# Certificates / keys
-*.pem
-*.key
-*.p12
-*.crt
-
-# Misc
-coverage/
-gcp-vision-key.json
 # vercel
 .vercel
 
