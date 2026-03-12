@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aso Ebi Elegance – Premium Ready-to-Wear and custom Aso Ebi fashion in Lagos, Nigeria.">
+  <title>Aso Ebi Elegance</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════
+       HEADER
+  ═══════════════════════════════════ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+
+      <!-- Logo -->
+      <a href="#" class="logo" aria-label="Aso Ebi Elegance home">
+        <i data-lucide="gem" class="logo-icon" aria-hidden="true"></i>
+        <div class="logo-text">
+          <span class="logo-name">Aso Ebi Elegance</span>
+          <span class="logo-tag">Lagos · Custom Fashion Atelier</span>
+        </div>
+      </a>
+
+      <!-- Primary Nav -->
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="#collections">Collections</a>
+        <a href="#asoebi">Aso Ebi</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="icon-btn" id="cartToggleBtn" aria-label="Open cart" aria-expanded="false">
+          <i data-lucide="shopping-bag" aria-hidden="true"></i>
+          <span class="cart-badge" id="cartBadge" aria-live="polite">0</span>
+        </button>
+        <button class="icon-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false">
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Category Sub-Nav -->
+    <nav class="sub-nav" aria-label="Category navigation">
+      <div class="container sub-nav-inner">
+        <button class="sub-nav-link active" data-category="all">All Styles</button>
+        <button class="sub-nav-link" data-category="women">Women's</button>
+        <button class="sub-nav-link" data-category="men">Men's</button>
+        <button class="sub-nav-link" data-category="accessories">Accessories</button>
+        <a href="#asoebi" class="sub-nav-link">Aso Ebi</a>
+        <a href="#services" class="sub-nav-link">Custom Orders</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+      <i data-lucide="x" aria-hidden="true"></i>
+    </button>
+    <nav aria-label="Mobile navigation">
+      <a href="#collections" class="mobile-nav-link">Collections</a>
+      <a href="#asoebi" class="mobile-nav-link">Aso Ebi</a>
+      <a href="#services" class="mobile-nav-link">Services</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+    </nav>
+  </div>
+
+
+  <!-- ═══════════════════════════════════
+       HERO
+  ═══════════════════════════════════ -->
+  <section class="hero" aria-label="Hero banner">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <span class="hero-eyebrow">Exquisite Designs for Every Occasion</span>
+        <h1 class="hero-title">Elevate Your Style with <em>Aso Ebi Elegance</em></h1>
+        <p class="hero-sub">Discover our stunning Ready-to-Wear collections and create your dream Aso Ebi look for every celebration.</p>
+        <div class="hero-btns">
+          <a href="#collections" class="btn btn-primary">
+            Shop Ready-to-Wear
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+          </a>
+          <a href="#asoebi" class="btn btn-secondary">
+            Explore Aso Ebi
+            <i data-lucide="sparkles" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-image" aria-hidden="true">
+        <!-- Replace src with your actual image path -->
+        <img src="Images/Image 1.jpg" alt="Model in Aso Ebi attire" loading="eager" onerror="this.style.display='none'">
+        <div class="hero-image-placeholder">
+          <i data-lucide="image"></i>
+          <span>Hero Image</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════
+       COLLECTIONS
+  ═══════════════════════════════════ -->
+  <section id="collections" class="section" aria-labelledby="collectionsHeading">
+    <div class="container">
+      <h2 id="collectionsHeading" class="section-title">Ready-to-Wear Collections</h2>
+
+      <!-- Category Filter Pills -->
+      <div class="filter-bar" role="group" aria-label="Filter by category">
+        <button class="pill active" data-category="all">All</button>
+        <button class="pill" data-category="women">Women</button>
+        <button class="pill" data-category="men">Men</button>
+        <button class="pill" data-category="accessories">Accessories</button>
+      </div>
+
+      <!-- Sort -->
+      <div class="shop-meta">
+        <span class="results-count" id="resultsCount" aria-live="polite"></span>
+        <label for="sortSelect" class="visually-hidden">Sort products</label>
+        <select class="sort-select" id="sortSelect" aria-label="Sort products">
+          <option value="default">Sort: Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="rating">Top Rated</option>
+        </select>
+      </div>
+
+      <!-- Products Grid -->
+      <div id="productsGrid" class="products-grid" aria-label="Products">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════
+       ASO EBI GALLERY
+  ═══════════════════════════════════ -->
+  <section id="asoebi" class="section section-dark" aria-labelledby="asoebiHeading">
+    <div class="container">
+      <h2 id="asoebiHeading" class="section-title light">Explore Our Aso Ebi Gallery</h2>
+      <p class="section-sub light">Get inspired by our past Aso Ebi creations. See the possibilities and envision your unique style for your next event.</p>
+
+      <div class="gallery-grid" id="galleryGrid" aria-label="Aso Ebi gallery">
+        <!-- Injected by JS -->
+      </div>
+
+      <div class="section-cta">
+        <a href="#contact" class="btn btn-secondary">
+          Request Your Custom Aso Ebi
+          <i data-lucide="sparkles" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════
+       SERVICES
+  ═══════════════════════════════════ -->
+  <section id="services" class="section" aria-labelledby="servicesHeading">
+    <div class="container">
+      <h2 id="servicesHeading" class="section-title">Our Services</h2>
+      <div class="services-grid" id="servicesGrid" aria-label="Services">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════ -->
+  <section id="contact" class="section section-dark" aria-labelledby="contactHeading">
+    <div class="container contact-layout">
+
+      <!-- Info + Newsletter -->
+      <div class="contact-info">
+        <h2 id="contactHeading" class="section-title light">Get In Touch</h2>
+        <p class="section-sub light">Have a question about our collections, Aso Ebi services, or custom orders? We'd love to hear from you!</p>
+
+        <ul class="contact-list" aria-label="Contact details">
+          <li class="contact-item">
+            <i data-lucide="mail" aria-hidden="true"></i>
+            <div>
+              <strong>Email Us</strong>
+              <a href="mailto:info@asoebielegance.com.ng">info@asoebielegance.com.ng</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <i data-lucide="message-circle" aria-hidden="true"></i>
+            <div>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/2348001234567" target="_blank" rel="noopener">+234 800 123 4567</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <i data-lucide="map-pin" aria-hidden="true"></i>
+            <div>
+              <strong>Studio</strong>
+              <span>14 Fashion Lane, Victoria Island, Lagos</span>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Newsletter -->
+        <div class="newsletter-box">
+          <h3>Join Our Mailing List</h3>
+          <p>Stay updated on new arrivals, exclusive offers, and style inspiration.</p>
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <label for="newsletterEmail" class="visually-hidden">Email address</label>
+            <input type="email" id="newsletterEmail" name="email" placeholder="Enter your email" autocomplete="email" required>
+            <button type="submit" aria-label="Subscribe">
+              <i data-lucide="send" aria-hidden="true"></i>
+            </button>
+          </form>
+          <p class="form-msg" id="newsletterMsg" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <!-- Inquiry Form -->
+      <div class="inquiry-box">
+        <h2 class="section-title light">Submit an Inquiry</h2>
+        <form class="inquiry-form" id="inquiryForm" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="inqName">Full Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="inqName" name="name" placeholder="e.g. Amara Okafor" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="inqPhone">Phone</label>
+              <input type="tel" id="inqPhone" name="phone" placeholder="+234 800 000 0000" autocomplete="tel">
+            </div>
+          </div>
+          <div class="field">
+            <label for="inqEmail">Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="inqEmail" name="email" placeholder="your@email.com" autocomplete="email" required>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="inqService">Service</label>
+              <select id="inqService" name="service">
+                <option value="">Select a service</option>
+                <option value="custom-aso-ebi">Custom Aso Ebi</option>
+                <option value="ready-to-wear">Ready-to-Wear Order</option>
+                <option value="consultation">Styling Consultation</option>
+                <option value="fabric">Fabric Sourcing</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="inqEvent">Event Type</label>
+              <input type="text" id="inqEvent" name="eventType" placeholder="e.g. Wedding, Birthday">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="inqDate">Event Date</label>
+              <input type="date" id="inqDate" name="eventDate">
+            </div>
+            <div class="field">
+              <label for="inqQty">Number of Outfits</label>
+              <input type="number" id="inqQty" name="quantity" placeholder="e.g. 5" min="1">
+            </div>
+          </div>
+          <div class="field">
+            <label for="inqMessage">Message / Request Details</label>
+            <textarea id="inqMessage" name="message" rows="4" placeholder="Tell us about your vision, preferred fabrics, colour palette..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Inquiry</button>
+          <p class="form-msg" id="inquiryMsg" aria-live="polite"></p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════ -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container footer-inner">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <h3>Aso Ebi Elegance</h3>
+          <p>Your premier destination for exquisite Aso Ebi styles and elegant Ready-to-Wear fashion. We craft dreams into reality, one stitch at a time.</p>
+        </div>
+
+        <nav aria-label="Quick links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#collections">Ready-to-Wear</a></li>
+            <li><a href="#asoebi">Aso Ebi Gallery</a></li>
+            <li><a href="#services">Custom Services</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-label="Customer care links">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Size Guide</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-social">
+          <h4>Connect With Us</h4>
+          <p>Follow us for daily inspiration and exclusive updates.</p>
+          <div class="social-links" aria-label="Social media links">
+            <a href="#" aria-label="Facebook"><i data-lucide="facebook" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Instagram"><i data-lucide="instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Pinterest"><i data-lucide="pinterest" aria-hidden="true"></i></a>
+            <a href="https://wa.me/2348001234567" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <i data-lucide="message-circle" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="copyrightYear"></span> Aso Ebi Elegance. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════
+       CART SIDEBAR
+  ═══════════════════════════════════ -->
+  <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
+  <aside class="cart-sidebar" id="cartSidebar" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-header">
+      <h2>
+        <i data-lucide="shopping-bag" aria-hidden="true"></i>
+        Shopping Cart
+      </h2>
+      <button class="icon-btn" id="cartCloseBtn" aria-label="Close cart">
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="cart-body" id="cartBody">
+      <!-- Injected by JS -->
+    </div>
+
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-totals">
+        <span>Total</span>
+        <span id="cartTotal">₦0</span>
+      </div>
+      <button class="btn btn-primary btn-full" id="checkoutBtn">
+        Proceed to Checkout
+        <i data-lucide="arrow-right" aria-hidden="true"></i>
+      </button>
+    </div>
+  </aside>
+
+
+  <!-- ═══════════════════════════════════
+       QUICK VIEW MODAL
+  ═══════════════════════════════════ -->
+  <div class="modal-overlay" id="modalOverlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal" id="modal">
+      <button class="modal-close icon-btn" id="modalClose" aria-label="Close modal">
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+      <div class="modal-img-wrap">
+        <img id="modalImg" src="" alt="">
+      </div>
+      <div class="modal-body">
+        <p class="modal-category" id="modalCategory"></p>
+        <h3 class="modal-title" id="modalTitle"></h3>
+        <div class="modal-rating" id="modalRating"></div>
+        <div class="modal-price-row">
+          <span class="modal-price" id="modalPrice"></span>
+          <span class="modal-old-price" id="modalOldPrice"></span>
+        </div>
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="size-selector">
+          <p class="size-label">Select Size</p>
+          <div class="size-options" id="sizeOptions" role="group" aria-label="Size options">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-primary" id="modalAddBtn">Add to Cart</button>
+          <button class="btn btn-outline" id="modalWishBtn">
+            <i data-lucide="heart" aria-hidden="true"></i> Wishlist
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════
+       TOAST
+  ═══════════════════════════════════ -->
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
+    <i data-lucide="check-circle" aria-hidden="true"></i>
+    <span id="toastMsg"></span>
+  </div>
+
+
+  <!-- Scripts -->
+  <script src="JS/data.js"></script>
+  <script src="JS/app.js"></script>
+</body>
+</html>
