@@ -17,7 +17,7 @@ export function Navbar() {
     return (
         <header style={{
             position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50,
-            background: 'var(--color-ivory)',
+            background: 'var(--color-cream)',
             borderBottom: '1px solid var(--color-linen)',
             height: 64,
         }}>
@@ -31,7 +31,7 @@ export function Navbar() {
                     fontFamily: 'var(--font-display)',
                     fontSize: 22, fontWeight: 300,
                     letterSpacing: '0.12em',
-                    color: 'var(--color-obsidian)',
+                    color: 'var(--color-espresso)',
                     textDecoration: 'none',
                 }}>
                     ELEVEN08
@@ -60,10 +60,10 @@ export function Navbar() {
                         fontSize: 10, fontWeight: 400,
                         letterSpacing: '0.2em',
                         textTransform: 'uppercase',
-                        color: 'var(--color-obsidian)',
+                        color: 'var(--color-espresso)',
                         textDecoration: 'none',
                         padding: '8px 20px',
-                        border: '1px solid var(--color-obsidian)',
+                        border: '1px solid var(--color-espresso)',
                     }}>
                         Book Styling
                     </Link>

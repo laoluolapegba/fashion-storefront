@@ -1,24 +1,25 @@
 @import "tailwindcss";
 
 @theme {
-    /* Fonts */
     --font-display: "Cormorant Garamond", Georgia, serif;
-    --font-ui: "Jost", system-ui, sans-serif;
+    --font-ui: "DM Sans", system-ui, sans-serif;
 
-    /* Colors */
-    --color-obsidian: #0D0D0D;
+    --color-espresso: #1A1208;
     --color-charcoal: #1A1A1A;
     --color-graphite: #2E2E2E;
     --color-smoke: #6B6B6B;
     --color-ash: #A8A4A0;
     --color-linen: #F0EDE8;
-    --color-ivory: #FAF9F7;
-    --color-gold: #C9A96E;
-    --color-gold-light: #E8D5B0;
-    --color-gold-dark: #A07840;
+    --color-sand: #F5E6D8;
+    --color-cream: #FAF7F2;
+    --color-warm-nude: #D4B896;
+    --color-burnt-orange: #C4611A;
+    --color-terracotta: #E8885A;
     --color-error: #C0392B;
     --color-success: #2E7D55;
 }
+
+
 
 *,
 *::before,
@@ -31,16 +32,17 @@ html {
 }
 
 body {
-    background-color: var(--color-ivory);
-    color: var(--color-obsidian);
+    background-color: var(--color-cream);
+    color: var(--color-espresso);
     font-family: var(--font-ui);
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
 }
 
+
 ::selection {
-    background: var(--color-gold-light);
-    color: var(--color-obsidian);
+    background: var(--color-sand);
+    color: var(--color-espresso);
 }
 
 input,
@@ -50,9 +52,9 @@ select {
     padding: 12px 16px;
     font-family: var(--font-ui);
     font-size: 13px;
-    background-color: var(--color-ivory);
+    background-color: var(--color-cream);
     border: 1px solid var(--color-linen);
-    color: var(--color-obsidian);
+    color: var(--color-espresso);
     outline: none;
 }
 
@@ -63,7 +65,7 @@ textarea::placeholder {
 
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
-    -webkit-text-fill-color: var(--color-obsidian);
-    -webkit-box-shadow: 0 0 0px 1000px var(--color-ivory) inset;
+    -webkit-text-fill-color: var(--color-espresso);
+    -webkit-box-shadow: 0 0 0px 1000px var(--color-cream) inset;
     transition: background-color 5000s ease-in-out 0s;
 }
