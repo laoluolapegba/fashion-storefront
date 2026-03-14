@@ -17,7 +17,7 @@ const footerLinks = {
 export function Footer() {
     return (
         <footer style={{
-            background: 'var(--color-obsidian)',
+            background: 'var(--color-espresso)',
             color: 'var(--color-ash)',
             padding: '64px 0 32px',
             marginTop: 'auto',
@@ -58,7 +58,7 @@ export function Footer() {
                                 fontSize: 9, fontWeight: 400,
                                 letterSpacing: '0.25em',
                                 textTransform: 'uppercase',
-                                color: 'var(--color-gold)',
+                                color: 'var(--color-burnt-orange)',
                                 marginBottom: 16,
                             }}>{group}</div>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
@@ -81,7 +81,7 @@ export function Footer() {
                     display: 'flex', justifyContent: 'space-between', alignItems: 'center',
                 }}>
                     <div style={{ fontFamily: 'var(--font-ui)', fontSize: 10, color: 'var(--color-smoke)', letterSpacing: '0.08em' }}>
-                        © {new Date().getFullYear()} Maison. All rights reserved.
+                        © {new Date().getFullYear()} ELEVEN08 . All rights reserved.
                     </div>
                     <div style={{ fontFamily: 'var(--font-ui)', fontSize: 10, color: 'var(--color-smoke)', letterSpacing: '0.08em' }}>
                         Privacy · Terms
