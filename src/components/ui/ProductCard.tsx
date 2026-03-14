@@ -2,87 +2,127 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 interface ProductCardProps {
-    id: string
-    name: string
-    brand?: string
-    price: number
-    currency?: string
-    imageUrl?: string
-    badge?: string
-    colourCount?: number
-    href?: string
+  id: string
+  name: string
+  slug: string
+  price: number
+  imageUrl?: string
+  badge?: string
+  category?: string
 }
 
 export function ProductCard({
-    id, name, brand, price, currency = '£',
-    imageUrl, badge, colourCount, href,
+  name,
+  slug,
+  price,
+  imageUrl,
+  badge,
+  category,
 }: ProductCardProps) {
-    return (
-        <Link href={href ?? `/shop/${id}`} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
-            <div style={{
-                background: 'var(--color-white)',
-                border: '1px solid var(--color-linen)',
-                cursor: 'pointer',
-            }}>
-                {/* Image */}
-                <div style={{ position: 'relative', paddingTop: '133%', overflow: 'hidden' }}>
-                    {imageUrl ? (
-                        <Image src={imageUrl} alt={name} fill style={{ objectFit: 'cover' }} />
-                    ) : (
-                        <div style={{
-                            position: 'absolute', inset: 0,
-                            background: 'linear-gradient(160deg, var(--color-linen) 0%, #D8D3CC 100%)',
-                            display: 'flex', alignItems: 'center', justifyContent: 'center',
-                        }}>
-                            <span style={{
-                                fontFamily: 'var(--font-display)',
-                                fontSize: 12, color: 'var(--color-ash)',
-                                letterSpacing: '0.08em',
-                            }}>No image</span>
-                        </div>
-                    )}
-                    {badge && (
-                        <div style={{
-                            position: 'absolute', top: 12, left: 12,
-                            background: 'var(--color-espresso)',
-                            color: 'var(--color-white)',
-                            fontFamily: 'var(--font-ui)',
-                            fontSize: 8, letterSpacing: '0.2em',
-                            textTransform: 'uppercase',
-                            padding: '4px 10px',
-                        }}>{badge}</div>
-                    )}
-                </div>
-                {/* Info */}
-                <div style={{ padding: 16 }}>
-                    {brand && (
-                        <div style={{
-                            fontFamily: 'var(--font-ui)',
-                            fontSize: 8, letterSpacing: '0.2em',
-                            textTransform: 'uppercase',
-                            color: 'var(--color-smoke)',
-                            marginBottom: 4,
-                        }}>{brand}</div>
-                    )}
-                    <div style={{
-                        fontFamily: 'var(--font-display)',
-                        fontSize: 17, lineHeight: 1.2,
-                        marginBottom: 8,
-                    }}>{name}</div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                        <div style={{ fontFamily: 'var(--font-ui)', fontSize: 13, fontWeight: 400 }}>
-                            {currency}{price.toLocaleString()}
-                        </div>
-                        {colourCount && (
-                            <div style={{
-                                fontFamily: 'var(--font-ui)',
-                                fontSize: 9, color: 'var(--color-smoke)',
-                                letterSpacing: '0.1em',
-                            }}>{colourCount} colour{colourCount > 1 ? 's' : ''}</div>
-                        )}
-                    </div>
-                </div>
+  return (
+    <Link
+      href={`/shop/${slug}`}
+      style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
+    >
+      <article style={{ border: '1px solid var(--color-linen)' }}>
+        <div
+          style={{
+            position: 'relative',
+            width: '100%',
+            aspectRatio: '3 / 4',
+            backgroundColor: 'var(--color-sand)',
+            overflow: 'hidden',
+          }}
+        >
+          {imageUrl ? (
+            <Image
+              src={imageUrl}
+              alt={name}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
+              style={{ objectFit: 'cover' }}
+            />
+          ) : (
+            <div
+              style={{
+                position: 'absolute',
+                inset: 0,
+                display: 'grid',
+                placeItems: 'center',
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: 'var(--font-display)',
+                  fontStyle: 'italic',
+                  fontWeight: 300,
+                  color: 'var(--color-smoke)',
+                }}
+              >
+                Eleven08
+              </span>
             </div>
-        </Link>
-    )
+          )}
+          {badge && (
+            <span
+              style={{
+                position: 'absolute',
+                top: '0.75rem',
+                left: '0.75rem',
+                backgroundColor: 'var(--color-burnt-orange)',
+                color: 'var(--color-cream)',
+                fontFamily: 'var(--font-ui)',
+                fontSize: '9px',
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                padding: '0.3rem 0.55rem',
+              }}
+            >
+              {badge}
+            </span>
+          )}
+        </div>
+        <div style={{ padding: '1rem 0.9rem 1.1rem' }}>
+          {category && (
+            <p
+              style={{
+                margin: 0,
+                marginBottom: '0.4rem',
+                fontFamily: 'var(--font-ui)',
+                fontSize: '8px',
+                letterSpacing: '0.22em',
+                textTransform: 'uppercase',
+                color: 'var(--color-smoke)',
+              }}
+            >
+              {category}
+            </p>
+          )}
+          <h3
+            style={{
+              margin: 0,
+              marginBottom: '0.5rem',
+              fontFamily: 'var(--font-display)',
+              fontSize: '17px',
+              fontWeight: 300,
+              color: 'var(--color-espresso)',
+            }}
+          >
+            {name}
+          </h3>
+          <p
+            style={{
+              margin: 0,
+              fontFamily: 'var(--font-ui)',
+              fontSize: '12px',
+              letterSpacing: '0.06em',
+              color: 'var(--color-graphite)',
+            }}
+          >
+            ₦{price.toLocaleString('en-NG')}
+          </p>
+        </div>
+      </article>
+    </Link>
+  )
 }
