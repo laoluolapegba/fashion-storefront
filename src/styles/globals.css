@@ -1,71 +1,69 @@
 @import "tailwindcss";
 
 @theme {
-    --font-display: "Cormorant Garamond", Georgia, serif;
-    --font-ui: "DM Sans", system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-ui: "DM Sans", system-ui, sans-serif;
 
-    --color-espresso: #1A1208;
-    --color-charcoal: #1A1A1A;
-    --color-graphite: #2E2E2E;
-    --color-smoke: #6B6B6B;
-    --color-ash: #A8A4A0;
-    --color-linen: #F0EDE8;
-    --color-sand: #F5E6D8;
-    --color-cream: #FAF7F2;
-    --color-warm-nude: #D4B896;
-    --color-burnt-orange: #C4611A;
-    --color-terracotta: #E8885A;
-    --color-error: #C0392B;
-    --color-success: #2E7D55;
+  --color-espresso: #1a1208;
+  --color-charcoal: #1a1a1a;
+  --color-graphite: #2e2e2e;
+  --color-smoke: #6b6b6b;
+  --color-ash: #a8a4a0;
+  --color-linen: #f0ede8;
+  --color-sand: #f5e6d8;
+  --color-cream: #faf7f2;
+  --color-warm-nude: #d4b896;
+  --color-burnt-orange: #c4611a;
+  --color-terracotta: #e8885a;
+  --color-error: #c0392b;
+  --color-success: #2e7d55;
+  --color-white: #ffffff;
 }
-
-
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--color-cream);
-    color: var(--color-espresso);
-    font-family: var(--font-ui);
-    font-weight: 300;
-    -webkit-font-smoothing: antialiased;
+  background-color: var(--color-cream);
+  color: var(--color-espresso);
+  font-family: var(--font-ui);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
 }
 
-
 ::selection {
-    background: var(--color-sand);
-    color: var(--color-espresso);
+  background: var(--color-sand);
+  color: var(--color-espresso);
 }
 
 input,
 textarea,
 select {
-    width: 100%;
-    padding: 12px 16px;
-    font-family: var(--font-ui);
-    font-size: 13px;
-    background-color: var(--color-cream);
-    border: 1px solid var(--color-linen);
-    color: var(--color-espresso);
-    outline: none;
+  width: 100%;
+  padding: 12px 16px;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  background-color: var(--color-cream);
+  border: 1px solid var(--color-linen);
+  color: var(--color-espresso);
+  outline: none;
 }
 
 input::placeholder,
 textarea::placeholder {
-    color: var(--color-ash);
+  color: var(--color-ash);
 }
 
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
-    -webkit-text-fill-color: var(--color-espresso);
-    -webkit-box-shadow: 0 0 0px 1000px var(--color-cream) inset;
-    transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: var(--color-espresso);
+  -webkit-box-shadow: 0 0 0px 1000px var(--color-cream) inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
