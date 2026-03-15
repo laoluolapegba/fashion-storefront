@@ -217,6 +217,12 @@ export type Database = {
           customer_phone: string | null
           id: string
           notes: string | null
+          payment_status: string | null
+          paystack_ref: string | null
+          shipping_address: string | null
+          shipping_city: string | null
+          shipping_country: string | null
+          shipping_state: string | null
           status: string | null
           total_amount: number
         }
@@ -227,6 +233,12 @@ export type Database = {
           customer_phone?: string | null
           id?: string
           notes?: string | null
+          payment_status?: string | null
+          paystack_ref?: string | null
+          shipping_address?: string | null
+          shipping_city?: string | null
+          shipping_country?: string | null
+          shipping_state?: string | null
           status?: string | null
           total_amount: number
         }
@@ -237,6 +249,12 @@ export type Database = {
           customer_phone?: string | null
           id?: string
           notes?: string | null
+          payment_status?: string | null
+          paystack_ref?: string | null
+          shipping_address?: string | null
+          shipping_city?: string | null
+          shipping_country?: string | null
+          shipping_state?: string | null
           status?: string | null
           total_amount?: number
         }
