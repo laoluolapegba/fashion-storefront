@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Eleven08 — Place a custom order or send a general inquiry.">
+  <title>Eleven08 — Order</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+
+<div class="announce-bar"><div class="announce-track"><span>Free delivery within Lagos on orders above ₦100,000</span><span>Ready-to-Wear: 2–5 working days</span><span>Custom orders: 7–14 working days</span><span>WhatsApp: +234 703 000 0117</span><span>Free delivery within Lagos on orders above ₦100,000</span><span>Ready-to-Wear: 2–5 working days</span><span>Custom orders: 7–14 working days</span><span>WhatsApp: +234 703 000 0117</span></div></div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <nav class="primary-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="shop.html">Shop</a><a href="collections.html">Collections</a></nav>
+    <a href="index.html" class="logo"><div class="logo-wordmark">ELEVEN08</div><div class="logo-tag">Your style defines you.</div></a>
+    <div class="header-actions">
+      <nav class="primary-nav" style="justify-content:flex-end"><a href="asoebi.html">Aso-Ebi</a><a href="order.html" class="active">Order</a><a href="booking.html">Consult</a></nav>
+      <button class="icon-btn" id="cartToggleBtn" aria-label="Cart" aria-expanded="false"><i data-lucide="shopping-bag"></i><span class="cart-badge" id="cartBadge">0</span></button>
+      <button class="icon-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><i data-lucide="menu"></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <button class="mobile-nav-close" id="mobileNavClose"><i data-lucide="x"></i></button>
+  <div class="mobile-logo">ELEVEN08</div>
+  <nav><a href="index.html" class="mobile-nav-link">Home</a><a href="about.html" class="mobile-nav-link">About</a><a href="shop.html" class="mobile-nav-link">Shop</a><a href="collections.html" class="mobile-nav-link">Collections</a><a href="asoebi.html" class="mobile-nav-link">Aso-Ebi</a><a href="order.html" class="mobile-nav-link active">Order</a><a href="booking.html" class="mobile-nav-link">Consult</a></nav>
+  <div class="mobile-nav-socials"><a href="https://instagram.com/eleven08_rtw" target="_blank"><i data-lucide="instagram"></i></a><a href="https://tiktok.com/@eleven0898" target="_blank"><i data-lucide="music-2"></i></a><a href="https://wa.me/2347030000117" target="_blank"><i data-lucide="message-circle"></i></a></div>
+</div>
+
+<section class="page-hero" style="min-height:36vh">
+  <div class="page-hero-bg"><img src="Images/" alt="" onerror="this.style.display='none'"><div class="page-hero-fallback"></div></div>
+  <div class="page-hero-overlay"></div>
+  <div class="container page-hero-content">
+    <span class="page-eyebrow">Bespoke & Ready-to-Wear</span>
+    <h1 class="page-title">Place an <em>Order</em></h1>
+    <p class="page-subtitle">Custom pieces, ready-to-wear inquiries, and general questions — all in one place.</p>
+  </div>
+</section>
+
+<!-- CUSTOM ORDER FORM -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="order-layout">
+
+      <!-- Info side -->
+      <div class="order-info">
+        <h2>Custom <em>Order</em></h2>
+        <p>Every custom order at Eleven08 is a collaboration. You bring the vision; we bring the craft.</p>
+
+        <div class="process-steps">
+          <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Submit Your Request</strong><span>Fill in the form with your details, measurements, and design ideas.</span></div></div>
+          <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Design Consultation</strong><span>We review your request and schedule a call to discuss direction, fabric, and timeline.</span></div></div>
+          <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Production</strong><span>Your piece is crafted with precision. We keep you updated throughout.</span></div></div>
+          <div class="step"><div class="step-num">4</div><div class="step-content"><strong>Delivery or Collection</strong><span>Nationwide delivery or in-studio collection. Your choice.</span></div></div>
+        </div>
+
+        <div class="policy-note">
+          <h4><i data-lucide="info"></i> Order Policy</h4>
+          <ul>
+            <li>Custom orders are non-refundable</li>
+            <li>Production timeline: 7–14 working days</li>
+            <li>Alterations offered where necessary</li>
+            <li>All orders subject to design approval</li>
+          </ul>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:var(--sp-3)">
+          <div class="contact-row"><i data-lucide="message-circle"></i><div><strong>WhatsApp</strong><a href="https://wa.me/2347030000117">+234 703 000 0117</a></div></div>
+          <div class="contact-row"><i data-lucide="instagram"></i><div><strong>Instagram</strong><a href="https://instagram.com/eleven08_rtw" target="_blank">@eleven08_rtw</a></div></div>
+        </div>
+      </div>
+
+      <!-- Form side -->
+      <div>
+        <form id="customOrderForm" novalidate>
+          <div class="form-section-label">Personal Information</div>
+          <div class="form-grid-2">
+            <div class="field"><label for="coName">Full Name <span>*</span></label><input type="text" id="coName" name="name" placeholder="e.g. Adaeze Okonkwo" required></div>
+            <div class="field"><label for="coPhone">Phone <span>*</span></label><input type="tel" id="coPhone" name="phone" placeholder="+234 800 000 0000" required></div>
+          </div>
+          <div class="field"><label for="coEmail">Email <span>*</span></label><input type="email" id="coEmail" name="email" placeholder="your@email.com" required></div>
+
+          <div class="form-section-label">Order Details</div>
+          <div class="form-grid-2">
+            <div class="field"><label for="coDesign">Design Reference</label><input type="text" id="coDesign" name="designReference" placeholder="Instagram post, style code, description"></div>
+            <div class="field"><label for="coFabric">Fabric Preference</label><input type="text" id="coFabric" name="fabricPreference" placeholder="e.g. Aso-Oke, Lace, Open to suggestions"></div>
+          </div>
+          <div class="form-grid-2">
+            <div class="field"><label for="coOccasion">Occasion</label><input type="text" id="coOccasion" name="occasion" placeholder="e.g. Wedding, Birthday"></div>
+            <div class="field"><label for="coEventDate">Event Date</label><input type="date" id="coEventDate" name="eventDate"></div>
+          </div>
+          <div class="field"><label for="coTimeline">Preferred Delivery Timeline</label>
+            <select id="coTimeline" name="deliveryTimeline">
+              <option value="">Select timeline</option>
+              <option value="7-days">7 days (Rush — subject to availability)</option>
+              <option value="14-days">7–14 days (Standard)</option>
+              <option value="21-days">14–21 days (Flexible)</option>
+              <option value="discuss">To be discussed</option>
+            </select>
+          </div>
+
+          <div class="form-section-label">Body Measurements <span class="form-section-note">in centimetres (cm)</span></div>
+          <div class="meas-grid">
+            <div class="field"><label for="mBust">Bust</label><input type="number" id="mBust" name="bust" placeholder="e.g. 92" min="50" max="200"></div>
+            <div class="field"><label for="mWaist">Waist</label><input type="number" id="mWaist" name="waist" placeholder="e.g. 74" min="40" max="200"></div>
+            <div class="field"><label for="mHip">Hip</label><input type="number" id="mHip" name="hip" placeholder="e.g. 98" min="50" max="200"></div>
+            <div class="field"><label for="mShoulder">Shoulder Width</label><input type="number" id="mShoulder" name="shoulder" placeholder="e.g. 38" min="20" max="80"></div>
+            <div class="field"><label for="mHeight">Height</label><input type="number" id="mHeight" name="height" placeholder="e.g. 165" min="100" max="220"></div>
+            <div class="field"><label for="mSleeve">Sleeve Length</label><input type="number" id="mSleeve" name="sleeveLength" placeholder="e.g. 60" min="10" max="100"></div>
+          </div>
+
+          <div class="field"><label for="coNotes">Additional Notes</label><textarea id="coNotes" name="notes" rows="3" placeholder="Any other details, style preferences, or special requests..."></textarea></div>
+
+          <div class="form-note"><i data-lucide="info"></i> Custom orders are non-refundable. We confirm your request within 24–48 hours.</div>
+          <button type="submit" class="btn btn-primary btn-full">Submit Custom Order <i data-lucide="arrow-right"></i></button>
+          <p class="form-msg" id="customOrderMsg"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GENERAL INQUIRY -->
+<section class="section section-warm">
+  <div class="container" style="max-width:680px">
+    <div class="section-head">
+      <p class="section-label">General Enquiries</p>
+      <h2 class="section-title">Send a <em>Message</em></h2>
+      <p class="section-sub">Questions about sizing, availability, shipping, or anything else? We respond within 24 hours.</p>
+    </div>
+    <form id="inquiryForm" class="form-light" novalidate>
+      <div class="form-grid-2">
+        <div class="field"><label for="inqName">Full Name <span>*</span></label><input type="text" id="inqName" name="name" placeholder="Your name" required></div>
+        <div class="field"><label for="inqPhone">Phone</label><input type="tel" id="inqPhone" name="phone" placeholder="+234 800 000 0000"></div>
+      </div>
+      <div class="field"><label for="inqEmail">Email <span>*</span></label><input type="email" id="inqEmail" name="email" placeholder="your@email.com" required></div>
+      <div class="form-grid-2">
+        <div class="field"><label for="inqType">Enquiry Type</label>
+          <select id="inqType" name="service">
+            <option value="">Select type</option>
+            <option value="ready-to-wear">Ready-to-Wear Order</option>
+            <option value="custom">Custom Order</option>
+            <option value="asoebi">Aso-Ebi</option>
+            <option value="shipping">Shipping & Delivery</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="field"><label for="inqEvent">Occasion</label><input type="text" id="inqEvent" name="eventType" placeholder="e.g. Wedding, Birthday"></div>
+      </div>
+      <div class="field"><label for="inqMessage">Message</label><textarea id="inqMessage" name="message" rows="5" placeholder="How can we help?"></textarea></div>
+      <button type="submit" class="btn btn-primary btn-full">Send Message <i data-lucide="arrow-right"></i></button>
+      <p class="form-msg light" id="inquiryMsg"></p>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-wordmark">ELEVEN08</div>
+        <span class="footer-tagline">Your style defines you.</span>
+        <p>Premium ready-to-wear and bespoke fashion for those who understand presence. Lagos, Nigeria.</p>
+        <div class="social-links">
+          <a href="https://instagram.com/eleven08_rtw" target="_blank" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="https://tiktok.com/@eleven0898"     target="_blank" aria-label="TikTok"><i data-lucide="music-2"></i></a>
+          <a href="https://wa.me/2347030000117"        target="_blank" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+        </div>
+      </div>
+      <nav aria-label="Shop">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All Pieces</a></li>
+          <li><a href="collections.html">Collections</a></li>
+          <li><a href="asoebi.html">Aso-Ebi</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Services">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="order.html">Custom Orders</a></li>
+          <li><a href="booking.html">Book a Consult</a></li>
+          <li><a href="about.html">Our Story</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="copyrightYear"></span> Eleven08. All rights reserved.</p>
+      <p>Lagos, Nigeria &nbsp;·&nbsp; Nationwide & International Shipping</p>
+    </div>
+  </div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-sidebar" id="cartSidebar" aria-hidden="true"><div class="cart-hdr"><h2><i data-lucide="shopping-bag"></i> Cart</h2><button class="icon-btn" id="cartCloseBtn"><i data-lucide="x"></i></button></div><div class="cart-body" id="cartBody"></div><div class="cart-foot" id="cartFooter"><div class="cart-totals"><span>Total</span><span id="cartTotal">₦0</span></div><button class="btn btn-primary btn-full" id="checkoutBtn">Proceed to Checkout <i data-lucide="arrow-right"></i></button></div></aside>
+<div class="modal-overlay" id="modalOverlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><button class="modal-close icon-btn" id="modalClose"><i data-lucide="x"></i></button><div class="modal-img-wrap"><img id="modalImg" src="" alt=""></div><div class="modal-body"><p class="modal-cat" id="modalCat"></p><h3 class="modal-title" id="modalTitle"></h3><div class="modal-rating" id="modalRating"></div><div class="modal-price-row"><span class="modal-price" id="modalPrice"></span><span class="modal-old" id="modalOld"></span></div><p class="modal-desc" id="modalDesc"></p><div class="size-selector"><p class="size-label">Select Size</p><div class="size-opts" id="modalSizes" role="group"></div><p class="size-note">Custom sizing available upon request</p></div><div class="modal-actions"><button class="btn btn-primary" id="modalAddBtn">Add to Cart</button><button class="btn btn-outline" id="modalWishBtn"><i data-lucide="heart"></i> Wishlist</button></div></div></div></div>
+<div class="toast" id="toast"><i data-lucide="check-circle"></i><span id="toastMsg"></span></div>
+<a class="wa-float" href="https://wa.me/2347030000117" target="_blank" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+
+<script src="JS/data.js"></script><script src="JS/app.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const today = new Date().toISOString().split('T')[0];
+  const d = document.getElementById('coEventDate'); if(d) d.min = today;
+
+  // Custom order form
+  document.getElementById('customOrderForm').addEventListener('submit', async e => {
+    e.preventDefault();
+    const msg = document.getElementById('customOrderMsg');
+    setMsg(msg,'');
+    const data = formToObj(e.target);
+    if (!data.name?.trim())  return setMsg(msg,'Please enter your full name.','error');
+    if (!data.phone?.trim()) return setMsg(msg,'Please enter your phone number.','error');
+    if (!validEmail(data.email)) return setMsg(msg,'Please enter a valid email.','error');
+    try {
+      const r = await submitCustomOrder(data);
+      setMsg(msg, r.message, 'success');
+      e.target.reset();
+      showToast('Custom order submitted!');
+    } catch { setMsg(msg,'Submission failed. Please try again.','error'); }
+  });
+
+  // Inquiry form
+  document.getElementById('inquiryForm').addEventListener('submit', async e => {
+    e.preventDefault();
+    const msg = document.getElementById('inquiryMsg');
+    setMsg(msg,'');
+    const data = formToObj(e.target);
+    if (!data.name?.trim())  return setMsg(msg,'Please enter your name.','error light');
+    if (!validEmail(data.email)) return setMsg(msg,'Please enter a valid email.','error light');
+    try {
+      const r = await submitInquiry(data);
+      setMsg(msg, r.message, 'success light');
+      e.target.reset();
+      showToast('Message sent!');
+    } catch { setMsg(msg,'Failed to send. Please try again.','error light'); }
+  });
+});
+</script>
+</body></html>

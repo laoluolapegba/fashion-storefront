@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Eleven08 — Book a styling or design consultation.">
+  <title>Eleven08 — Book a Consultation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+
+<!-- ANNOUNCE BAR -->
+<div class="announce-bar">
+  <div class="announce-track">
+    <span>Free delivery within Lagos on orders above ₦100,000</span>
+    <span>Ready-to-Wear: 2–5 working days</span>
+    <span>Custom orders: 7–14 working days</span>
+    <span>WhatsApp: +234 703 000 0117</span>
+    <span>Free delivery within Lagos on orders above ₦100,000</span>
+    <span>Ready-to-Wear: 2–5 working days</span>
+    <span>Custom orders: 7–14 working days</span>
+    <span>WhatsApp: +234 703 000 0117</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-inner">
+    <nav class="primary-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="shop.html">Shop</a>
+      <a href="collections.html">Collections</a>
+    </nav>
+    <a href="index.html" class="logo">
+      <div class="logo-wordmark">ELEVEN08</div>
+      <div class="logo-tag">Your style defines you.</div>
+    </a>
+    <div class="header-actions">
+      <nav class="primary-nav" style="justify-content:flex-end">
+        <a href="asoebi.html">Aso-Ebi</a>
+        <a href="order.html">Order</a>
+        <a href="booking.html" class="active">Consult</a>
+      </nav>
+      <button class="icon-btn" id="cartToggleBtn" aria-label="Cart" aria-expanded="false">
+        <i data-lucide="shopping-bag"></i>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+      <button class="icon-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close">
+    <i data-lucide="x"></i>
+  </button>
+  <div class="mobile-logo">ELEVEN08</div>
+  <nav>
+    <a href="index.html"       class="mobile-nav-link">Home</a>
+    <a href="about.html"       class="mobile-nav-link">About</a>
+    <a href="shop.html"        class="mobile-nav-link">Shop</a>
+    <a href="collections.html" class="mobile-nav-link">Collections</a>
+    <a href="asoebi.html"      class="mobile-nav-link">Aso-Ebi</a>
+    <a href="order.html"       class="mobile-nav-link">Order</a>
+    <a href="booking.html"     class="mobile-nav-link active">Consult</a>
+  </nav>
+  <div class="mobile-nav-socials">
+    <a href="https://instagram.com/eleven08_rtw" target="_blank" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+    <a href="https://tiktok.com/@eleven0898"     target="_blank" aria-label="TikTok"><i data-lucide="music-2"></i></a>
+    <a href="https://wa.me/2347030000117"        target="_blank" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     PAGE HERO
+═══════════════════════════════════ -->
+<section class="page-hero" style="min-height:40vh">
+  <div class="page-hero-bg">
+    <div class="slide active"><img src="Images/" alt="" loading="eager" onerror="this.style.display='none'"></div>
+    <div class="slide"><img src="Images/" alt="" loading="lazy" onerror="this.style.display='none'"></div>
+    <div class="slide"><img src="Images/" alt="" loading="lazy" onerror="this.style.display='none'"></div>
+    <div class="page-hero-fallback"></div>
+  </div>
+  <div class="page-hero-overlay"></div>
+
+  <div class="page-hero-dots" aria-label="Slideshow" role="tablist">
+    <button class="page-hero-dot active" aria-label="Slide 1" role="tab" aria-selected="true"></button>
+    <button class="page-hero-dot"        aria-label="Slide 2" role="tab" aria-selected="false"></button>
+    <button class="page-hero-dot"        aria-label="Slide 3" role="tab" aria-selected="false"></button>
+  </div>
+
+  <div class="container page-hero-content">
+    <span class="page-eyebrow">Private Sessions</span>
+    <h1 class="page-title">Book a <em>Consultation</em></h1>
+    <p class="page-subtitle">A dedicated session with an Eleven08 stylist — virtual or in person.</p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════
+     SECTION 1 — CHOOSE YOUR FORMAT
+═══════════════════════════════════ -->
+<section class="section">
+  <div class="container" style="max-width:860px">
+    <div class="section-head">
+      <p class="section-label">Step One</p>
+      <h2 class="section-title">Choose Your <em>Format</em></h2>
+      <p class="section-sub">Select the consultation type that works best for you. Both sessions are 30–45 minutes.</p>
+    </div>
+
+    <div class="consult-types">
+      <div class="consult-card" id="cardVirtual" onclick="selectConsult('virtual')">
+        <div class="select-indicator" id="indVirtual"></div>
+        <div class="consult-card-icon"><i data-lucide="video"></i></div>
+        <h3>Virtual Consultation</h3>
+        <p>Style discussion and design consultation via video call. Ideal for clients outside Lagos or those with busy schedules.</p>
+        <span class="duration">30 – 45 minutes</span>
+      </div>
+      <div class="consult-card" id="cardInPerson" onclick="selectConsult('in-person')">
+        <div class="select-indicator" id="indInPerson"></div>
+        <div class="consult-card-icon"><i data-lucide="building-2"></i></div>
+        <h3>In-Person Consultation</h3>
+        <p>Private session at our Lagos studio. Experience fabric swatches, discuss silhouettes, and walk through your vision in detail.</p>
+        <span class="duration">30 – 45 minutes · Lagos studio only</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════
+     SECTION 2 — WHAT TO EXPECT
+═══════════════════════════════════ -->
+<section class="section section-warm">
+  <div class="container" style="max-width:860px">
+    <div class="section-head">
+      <p class="section-label">Step Two</p>
+      <h2 class="section-title">What to <em>Expect</em></h2>
+      <p class="section-sub">Consultations are designed to give you clarity — on fabric, design, and what suits your body and occasion.</p>
+    </div>
+
+    <div class="booking-points">
+      <div class="booking-point">
+        <i data-lucide="clock"></i>
+        <div>
+          <strong>Duration</strong>
+          <span>30 – 45 minutes per session. We keep it focused and productive.</span>
+        </div>
+      </div>
+      <div class="booking-point">
+        <i data-lucide="calendar-check"></i>
+        <div>
+          <strong>Confirmation</strong>
+          <span>We confirm your slot within 24 hours of receiving your request.</span>
+        </div>
+      </div>
+      <div class="booking-point">
+        <i data-lucide="lightbulb"></i>
+        <div>
+          <strong>Preparation</strong>
+          <span>Bring or share inspiration images, colour preferences, and your event brief if you have one. The more detail, the better.</span>
+        </div>
+      </div>
+      <div class="booking-point">
+        <i data-lucide="message-circle"></i>
+        <div>
+          <strong>Prefer WhatsApp?</strong>
+          <span>Reach us directly at <a href="https://wa.me/2347030000117" style="color:var(--orange);font-weight:500">+234 703 000 0117</a> — we respond within a few hours.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════
+     SECTION 3 — REQUEST FORM
+═══════════════════════════════════ -->
+<section class="section">
+  <div class="container" style="max-width:680px">
+    <div class="section-head">
+      <p class="section-label">Step Three</p>
+      <h2 class="section-title">Request an <em>Appointment</em></h2>
+      <p class="section-sub">Fill in your details and we will confirm your slot within 24 hours.</p>
+    </div>
+
+    <div class="booking-form-box">
+      <h3>Your Details</h3>
+      <p class="form-sub">All fields marked * are required.</p>
+
+      <form id="bookingForm" class="form-light" novalidate>
+        <input type="hidden" id="bkTypeHidden" name="consultationType" value="">
+
+        <div class="form-grid-2">
+          <div class="field">
+            <label for="bkName">Full Name <span>*</span></label>
+            <input type="text" id="bkName" name="name" placeholder="Your full name" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="bkPhone">Phone <span>*</span></label>
+            <input type="tel" id="bkPhone" name="phone" placeholder="+234 800 000 0000" required autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="bkEmail">Email Address <span>*</span></label>
+          <input type="email" id="bkEmail" name="email" placeholder="your@email.com" required autocomplete="email">
+        </div>
+
+        <div class="field">
+          <label for="bkTypeDisplay">Consultation Type</label>
+          <input type="text" id="bkTypeDisplay" placeholder="Select a format in Step 1 above" readonly style="background:var(--cream);cursor:default">
+        </div>
+
+        <div class="form-grid-2">
+          <div class="field">
+            <label for="bkDate">Preferred Date <span>*</span></label>
+            <input type="date" id="bkDate" name="preferredDate" required>
+          </div>
+          <div class="field">
+            <label for="bkTime">Preferred Time</label>
+            <select id="bkTime" name="preferredTime">
+              <option value="">Select time</option>
+              <option value="10:00">10:00 AM</option>
+              <option value="11:00">11:00 AM</option>
+              <option value="12:00">12:00 PM</option>
+              <option value="14:00">2:00 PM</option>
+              <option value="15:00">3:00 PM</option>
+              <option value="16:00">4:00 PM</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="bkPurpose">What would you like to discuss?</label>
+          <textarea id="bkPurpose" name="purpose" rows="4"
+            placeholder="e.g. Custom order for a June wedding, general wardrobe styling, Aso-Ebi group coordination..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">
+          Request Appointment
+          <i data-lucide="calendar"></i>
+        </button>
+        <p class="form-msg light" id="bookingMsg"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-wordmark">ELEVEN08</div>
+        <span class="footer-tagline">Your style defines you.</span>
+        <p>Premium ready-to-wear and bespoke fashion for those who understand presence. Lagos, Nigeria.</p>
+        <div class="social-links">
+          <a href="https://instagram.com/eleven08_rtw" target="_blank" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="https://tiktok.com/@eleven0898"     target="_blank" aria-label="TikTok"><i data-lucide="music-2"></i></a>
+          <a href="https://wa.me/2347030000117"        target="_blank" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+        </div>
+      </div>
+      <nav aria-label="Shop">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All Pieces</a></li>
+          <li><a href="collections.html">Collections</a></li>
+          <li><a href="asoebi.html">Aso-Ebi</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Services">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="order.html">Custom Orders</a></li>
+          <li><a href="booking.html">Book a Consult</a></li>
+          <li><a href="about.html">Our Story</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="copyrightYear"></span> Eleven08. All rights reserved.</p>
+      <p>Lagos, Nigeria &nbsp;·&nbsp; Nationwide & International Shipping</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- SHARED UI -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-sidebar" id="cartSidebar" aria-hidden="true">
+  <div class="cart-hdr">
+    <h2><i data-lucide="shopping-bag"></i> Cart</h2>
+    <button class="icon-btn" id="cartCloseBtn"><i data-lucide="x"></i></button>
+  </div>
+  <div class="cart-body" id="cartBody"></div>
+  <div class="cart-foot" id="cartFooter">
+    <div class="cart-totals"><span>Total</span><span id="cartTotal">₦0</span></div>
+    <button class="btn btn-primary btn-full" id="checkoutBtn">
+      Proceed to Checkout <i data-lucide="arrow-right"></i>
+    </button>
+  </div>
+</aside>
+
+<div class="modal-overlay" id="modalOverlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <button class="modal-close icon-btn" id="modalClose"><i data-lucide="x"></i></button>
+    <div class="modal-img-wrap"><img id="modalImg" src="" alt=""></div>
+    <div class="modal-body">
+      <p class="modal-cat"    id="modalCat"></p>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <div class="modal-rating" id="modalRating"></div>
+      <div class="modal-price-row">
+        <span class="modal-price" id="modalPrice"></span>
+        <span class="modal-old"   id="modalOld"></span>
+      </div>
+      <p class="modal-desc" id="modalDesc"></p>
+      <div class="size-selector">
+        <p class="size-label">Select Size</p>
+        <div class="size-opts" id="modalSizes" role="group"></div>
+        <p class="size-note">Custom sizing available upon request</p>
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-primary" id="modalAddBtn">Add to Cart</button>
+        <button class="btn btn-outline"  id="modalWishBtn"><i data-lucide="heart"></i> Wishlist</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"><i data-lucide="check-circle"></i><span id="toastMsg"></span></div>
+<a class="wa-float" href="https://wa.me/2347030000117" target="_blank" aria-label="WhatsApp">
+  <i data-lucide="message-circle"></i>
+</a>
+
+<script src="JS/data.js"></script>
+<script src="JS/app.js"></script>
+<script>
+let selectedConsult = '';
+
+function selectConsult(type) {
+  selectedConsult = type;
+  document.getElementById('cardVirtual').classList.toggle('selected',  type === 'virtual');
+  document.getElementById('cardInPerson').classList.toggle('selected', type === 'in-person');
+  document.getElementById('bkTypeHidden').value  = type;
+  document.getElementById('bkTypeDisplay').value = type === 'virtual'
+    ? 'Virtual Consultation'
+    : 'In-Person Consultation';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Set minimum date to today
+  const today = new Date().toISOString().split('T')[0];
+  const d = document.getElementById('bkDate');
+  if (d) d.min = today;
+
+  // Form submission
+  document.getElementById('bookingForm').addEventListener('submit', async e => {
+    e.preventDefault();
+    const msg = document.getElementById('bookingMsg');
+    setMsg(msg, '');
+
+    const data = formToObj(e.target);
+    if (!data.name?.trim())      return setMsg(msg, 'Please enter your name.',           'error light');
+    if (!data.phone?.trim())     return setMsg(msg, 'Please enter your phone number.',   'error light');
+    if (!validEmail(data.email)) return setMsg(msg, 'Please enter a valid email.',       'error light');
+    if (!data.preferredDate)     return setMsg(msg, 'Please select a preferred date.',   'error light');
+
+    try {
+      const r = await submitBooking(data);
+      setMsg(msg, r.message, 'success light');
+      e.target.reset();
+      selectedConsult = '';
+      document.querySelectorAll('.consult-card').forEach(c => c.classList.remove('selected'));
+      showToast('Booking request sent!');
+    } catch {
+      setMsg(msg, 'Booking failed. Please try again.', 'error light');
+    }
+  });
+});
+</script>
+</body>
+</html>

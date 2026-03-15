@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Eleven08 — Aso-Ebi styles for every celebration.">
+  <title>Eleven08 — Aso-Ebi Styles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+
+<div class="announce-bar"><div class="announce-track"><span>Free delivery within Lagos on orders above ₦100,000</span><span>Ready-to-Wear: 2–5 working days</span><span>Custom orders: 7–14 working days</span><span>WhatsApp: +234 703 000 0117</span><span>Free delivery within Lagos on orders above ₦100,000</span><span>Ready-to-Wear: 2–5 working days</span><span>Custom orders: 7–14 working days</span><span>WhatsApp: +234 703 000 0117</span></div></div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <nav class="primary-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="shop.html">Shop</a><a href="collections.html">Collections</a></nav>
+    <a href="index.html" class="logo"><div class="logo-wordmark">ELEVEN08</div><div class="logo-tag">Your style defines you.</div></a>
+    <div class="header-actions">
+      <nav class="primary-nav" style="justify-content:flex-end"><a href="asoebi.html" class="active">Aso-Ebi</a><a href="order.html">Order</a><a href="booking.html">Consult</a></nav>
+      <button class="icon-btn" id="cartToggleBtn" aria-label="Cart" aria-expanded="false"><i data-lucide="shopping-bag"></i><span class="cart-badge" id="cartBadge">0</span></button>
+      <button class="icon-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><i data-lucide="menu"></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <button class="mobile-nav-close" id="mobileNavClose"><i data-lucide="x"></i></button>
+  <div class="mobile-logo">ELEVEN08</div>
+  <nav><a href="index.html" class="mobile-nav-link">Home</a><a href="about.html" class="mobile-nav-link">About</a><a href="shop.html" class="mobile-nav-link">Shop</a><a href="collections.html" class="mobile-nav-link">Collections</a><a href="asoebi.html" class="mobile-nav-link active">Aso-Ebi</a><a href="order.html" class="mobile-nav-link">Order</a><a href="booking.html" class="mobile-nav-link">Consult</a></nav>
+  <div class="mobile-nav-socials"><a href="https://instagram.com/eleven08_rtw" target="_blank"><i data-lucide="instagram"></i></a><a href="https://tiktok.com/@eleven0898" target="_blank"><i data-lucide="music-2"></i></a><a href="https://wa.me/2347030000117" target="_blank"><i data-lucide="message-circle"></i></a></div>
+</div>
+
+<section class="page-hero" style="min-height:42vh">
+  <div class="page-hero-bg"><img src="Images/" alt="" onerror="this.style.display='none'"><div class="page-hero-fallback"></div></div>
+  <div class="page-hero-overlay"></div>
+  <div class="container page-hero-content">
+    <span class="page-eyebrow">Group & Ceremonial Wear</span>
+    <h1 class="page-title">Aso-Ebi <em>Styles</em></h1>
+    <p class="page-subtitle">Coordinated elegance for weddings, naming ceremonies, birthdays, and every celebration worth dressing for.</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="section">
+  <div class="container">
+    <div class="asoebi-intro">
+      <div class="asoebi-intro-img"><img src="Images/" alt="Aso-Ebi styles" onerror="this.style.background='var(--cream)'"></div>
+      <div class="asoebi-intro-text">
+        <p class="section-label">What is Aso-Ebi?</p>
+        <h2 class="section-title">Unity in <em>Fabric</em></h2>
+        <p>Aso-Ebi — meaning "family cloth" in Yoruba — is the tradition of wearing coordinated outfits at celebrations. It is a visual declaration of love, solidarity, and belonging.</p>
+        <p>At Eleven08, we bring the same precision and luxury to group Aso-Ebi orders as we do to every individual piece. From the fabric selection to the finishing, every outfit in your group will reflect the standard you set.</p>
+        <div class="asoebi-features">
+          <div class="asoebi-feat"><h4>Group Orders</h4><p>Minimum 5 units. Volume pricing available on request.</p></div>
+          <div class="asoebi-feat"><h4>Custom Colours</h4><p>We source to your specific colour palette and event theme.</p></div>
+          <div class="asoebi-feat"><h4>Mixed Sizes</h4><p>XS to XXXL available across a single group order.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section section-warm">
+  <div class="container">
+    <div class="section-head">
+      <p class="section-label">Past Work</p>
+      <h2 class="section-title">The <em>Gallery</em></h2>
+      <p class="section-sub">A look at coordinated group styles from past events and campaigns.</p>
+    </div>
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- ASO-EBI PRODUCTS -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="section-label">Available Now</p>
+      <h2 class="section-title">Aso-Ebi <em>Pieces</em></h2>
+      <p class="section-sub">Ready-to-order coordinated styles. Contact us for group and bulk pricing.</p>
+    </div>
+    <div id="asoebiGrid" class="products-grid"></div>
+  </div>
+</section>
+
+<!-- INQUIRY FORM -->
+<section class="asoebi-inquiry section">
+  <div class="container">
+    <div class="inquiry-layout">
+      <div class="inquiry-info">
+        <h2>Request Your <em>Aso-Ebi</em></h2>
+        <p>Tell us about your event and we'll guide you through fabric selection, group coordination, and production timeline.</p>
+        <div class="info-list">
+          <div class="info-item"><div class="info-item-icon"><i data-lucide="users"></i></div><div><strong>Group Orders</strong><span>Minimum 5 outfits. We coordinate sizes and fabric cuts across the group.</span></div></div>
+          <div class="info-item"><div class="info-item-icon"><i data-lucide="clock"></i></div><div><strong>Timeline</strong><span>7–14 working days depending on group size and design complexity.</span></div></div>
+          <div class="info-item"><div class="info-item-icon"><i data-lucide="message-circle"></i></div><div><strong>WhatsApp</strong><span><a href="https://wa.me/2347030000117" style="color:var(--orange)">+234 703 000 0117</a></span></div></div>
+        </div>
+      </div>
+      <div class="light-form-box">
+        <h3 style="font-family:var(--display);font-size:var(--fs-2xl);font-weight:var(--fw-reg);margin-bottom:var(--sp-6)">Aso-Ebi Inquiry</h3>
+        <form id="asoebiForm" class="form-light" novalidate>
+          <div class="form-grid-2">
+            <div class="field"><label for="abName">Full Name <span>*</span></label><input type="text" id="abName" name="name" placeholder="Your name" required></div>
+            <div class="field"><label for="abPhone">Phone <span>*</span></label><input type="tel" id="abPhone" name="phone" placeholder="+234 800 000 0000" required></div>
+          </div>
+          <div class="field"><label for="abEmail">Email <span>*</span></label><input type="email" id="abEmail" name="email" placeholder="your@email.com" required></div>
+          <div class="form-grid-2">
+            <div class="field"><label for="abEvent">Event Type</label><input type="text" id="abEvent" name="eventType" placeholder="e.g. Wedding, Birthday"></div>
+            <div class="field"><label for="abDate">Event Date</label><input type="date" id="abDate" name="eventDate"></div>
+          </div>
+          <div class="form-grid-2">
+            <div class="field"><label for="abQty">Number of Outfits</label><input type="number" id="abQty" name="quantity" placeholder="e.g. 10" min="5"></div>
+            <div class="field"><label for="abFabric">Fabric Preference</label><input type="text" id="abFabric" name="fabric" placeholder="e.g. Ankara, Lace, Aso-Oke"></div>
+          </div>
+          <div class="field"><label for="abNotes">Colour Palette / Additional Notes</label><textarea id="abNotes" name="notes" rows="3" placeholder="Describe your colour palette, theme, or any other details..."></textarea></div>
+          <button type="submit" class="btn btn-primary btn-full">Send Aso-Ebi Inquiry <i data-lucide="arrow-right"></i></button>
+          <p class="form-msg light" id="asoebiMsg"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-wordmark">ELEVEN08</div>
+        <span class="footer-tagline">Your style defines you.</span>
+        <p>Premium ready-to-wear and bespoke fashion for those who understand presence. Lagos, Nigeria.</p>
+        <div class="social-links">
+          <a href="https://instagram.com/eleven08_rtw" target="_blank" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="https://tiktok.com/@eleven0898"     target="_blank" aria-label="TikTok"><i data-lucide="music-2"></i></a>
+          <a href="https://wa.me/2347030000117"        target="_blank" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+        </div>
+      </div>
+      <nav aria-label="Shop">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All Pieces</a></li>
+          <li><a href="collections.html">Collections</a></li>
+          <li><a href="asoebi.html">Aso-Ebi</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Services">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="order.html">Custom Orders</a></li>
+          <li><a href="booking.html">Book a Consult</a></li>
+          <li><a href="about.html">Our Story</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="copyrightYear"></span> Eleven08. All rights reserved.</p>
+      <p>Lagos, Nigeria &nbsp;·&nbsp; Nationwide & International Shipping</p>
+    </div>
+  </div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-sidebar" id="cartSidebar" aria-hidden="true"><div class="cart-hdr"><h2><i data-lucide="shopping-bag"></i> Cart</h2><button class="icon-btn" id="cartCloseBtn"><i data-lucide="x"></i></button></div><div class="cart-body" id="cartBody"></div><div class="cart-foot" id="cartFooter"><div class="cart-totals"><span>Total</span><span id="cartTotal">₦0</span></div><button class="btn btn-primary btn-full" id="checkoutBtn">Proceed to Checkout <i data-lucide="arrow-right"></i></button></div></aside>
+<div class="modal-overlay" id="modalOverlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><button class="modal-close icon-btn" id="modalClose"><i data-lucide="x"></i></button><div class="modal-img-wrap"><img id="modalImg" src="" alt=""></div><div class="modal-body"><p class="modal-cat" id="modalCat"></p><h3 class="modal-title" id="modalTitle"></h3><div class="modal-rating" id="modalRating"></div><div class="modal-price-row"><span class="modal-price" id="modalPrice"></span><span class="modal-old" id="modalOld"></span></div><p class="modal-desc" id="modalDesc"></p><div class="size-selector"><p class="size-label">Select Size</p><div class="size-opts" id="modalSizes" role="group"></div><p class="size-note">Custom sizing available upon request</p></div><div class="modal-actions"><button class="btn btn-primary" id="modalAddBtn">Add to Cart</button><button class="btn btn-outline" id="modalWishBtn"><i data-lucide="heart"></i> Wishlist</button></div></div></div></div>
+<div class="toast" id="toast"><i data-lucide="check-circle"></i><span id="toastMsg"></span></div>
+<a class="wa-float" href="https://wa.me/2347030000117" target="_blank" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+
+<script src="JS/data.js"></script><script src="JS/app.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  const all = await getProducts();
+  state.allProducts = all;
+  renderProductsToGrid('asoebiGrid', all.filter(p => p.category === 'asoebi'));
+
+  const gallery = await getGallery();
+  const gg = document.getElementById('galleryGrid');
+  gg.innerHTML = gallery.map(g => `
+    <figure class="gallery-item">
+      <img src="${g.image}" alt="${g.caption}" loading="lazy" onerror="this.style.display='none'">
+      <div class="gallery-ph"><i data-lucide="image"></i><span>${g.caption}</span></div>
+      <figcaption class="gallery-caption">${g.caption}</figcaption>
+    </figure>`).join('');
+  if (window.lucide) lucide.createIcons();
+
+  // Aso-Ebi inquiry form
+  document.getElementById('asoebiForm').addEventListener('submit', async e => {
+    e.preventDefault();
+    const msg = document.getElementById('asoebiMsg');
+    const data = Object.fromEntries(new FormData(e.target).entries());
+    if (!data.name?.trim() || !data.phone?.trim()) return setMsg(msg,'Please enter your name and phone.','error light');
+    if (!data.email?.trim() || !validEmail(data.email)) return setMsg(msg,'Please enter a valid email.','error light');
+    try {
+      const r = await submitInquiry({ ...data, type:'aso-ebi' });
+      setMsg(msg, r.message, 'success light');
+      e.target.reset();
+      showToast('Aso-Ebi inquiry sent!');
+    } catch { setMsg(msg,'Failed to send. Please try again.','error light'); }
+  });
+});
+</script>
+</body></html>

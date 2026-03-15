@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Eleven08 — Browse collections by category.">
+  <title>Eleven08 — Collections</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+
+<div class="announce-bar"><div class="announce-track"><span>Free delivery within Lagos on orders above ₦100,000</span><span>Ready-to-Wear: 2–5 working days</span><span>Custom orders: 7–14 working days</span><span>WhatsApp: +234 703 000 0117</span><span>Free delivery within Lagos on orders above ₦100,000</span><span>Ready-to-Wear: 2–5 working days</span><span>Custom orders: 7–14 working days</span><span>WhatsApp: +234 703 000 0117</span></div></div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <nav class="primary-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="shop.html">Shop</a><a href="collections.html" class="active">Collections</a></nav>
+    <a href="index.html" class="logo"><div class="logo-wordmark">ELEVEN08</div><div class="logo-tag">Your style defines you.</div></a>
+    <div class="header-actions">
+      <nav class="primary-nav" style="justify-content:flex-end"><a href="asoebi.html">Aso-Ebi</a><a href="order.html">Order</a><a href="booking.html">Consult</a></nav>
+      <button class="icon-btn" id="cartToggleBtn" aria-label="Cart" aria-expanded="false"><i data-lucide="shopping-bag"></i><span class="cart-badge" id="cartBadge">0</span></button>
+      <button class="icon-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><i data-lucide="menu"></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <button class="mobile-nav-close" id="mobileNavClose"><i data-lucide="x"></i></button>
+  <div class="mobile-logo">ELEVEN08</div>
+  <nav><a href="index.html" class="mobile-nav-link">Home</a><a href="about.html" class="mobile-nav-link">About</a><a href="shop.html" class="mobile-nav-link">Shop</a><a href="collections.html" class="mobile-nav-link active">Collections</a><a href="asoebi.html" class="mobile-nav-link">Aso-Ebi</a><a href="order.html" class="mobile-nav-link">Order</a><a href="booking.html" class="mobile-nav-link">Consult</a></nav>
+  <div class="mobile-nav-socials"><a href="https://instagram.com/eleven08_rtw" target="_blank"><i data-lucide="instagram"></i></a><a href="https://tiktok.com/@eleven0898" target="_blank"><i data-lucide="music-2"></i></a><a href="https://wa.me/2347030000117" target="_blank"><i data-lucide="message-circle"></i></a></div>
+</div>
+
+<section class="page-hero" style="min-height:36vh">
+  <div class="page-hero-bg"><img src="Images/" alt="" onerror="this.style.display='none'"><div class="page-hero-fallback"></div></div>
+  <div class="page-hero-overlay"></div>
+  <div class="container page-hero-content">
+    <span class="page-eyebrow">Browse by Category</span>
+    <h1 class="page-title">Our <em>Collections</em></h1>
+    <p class="page-subtitle">Six categories, one aesthetic — fearless and refined.</p>
+  </div>
+</section>
+
+<!-- CATEGORY CARDS -->
+<section class="section">
+  <div class="container">
+    <div class="cat-grid" id="catGrid">
+      <!-- injected by JS -->
+    </div>
+
+    <!-- Per-category product rows -->
+    <div id="collectionRows"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-wordmark">ELEVEN08</div>
+        <span class="footer-tagline">Your style defines you.</span>
+        <p>Premium ready-to-wear and bespoke fashion for those who understand presence. Lagos, Nigeria.</p>
+        <div class="social-links">
+          <a href="https://instagram.com/eleven08_rtw" target="_blank" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="https://tiktok.com/@eleven0898"     target="_blank" aria-label="TikTok"><i data-lucide="music-2"></i></a>
+          <a href="https://wa.me/2347030000117"        target="_blank" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+        </div>
+      </div>
+      <nav aria-label="Shop">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All Pieces</a></li>
+          <li><a href="collections.html">Collections</a></li>
+          <li><a href="asoebi.html">Aso-Ebi</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Services">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="order.html">Custom Orders</a></li>
+          <li><a href="booking.html">Book a Consult</a></li>
+          <li><a href="about.html">Our Story</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="copyrightYear"></span> Eleven08. All rights reserved.</p>
+      <p>Lagos, Nigeria &nbsp;·&nbsp; Nationwide & International Shipping</p>
+    </div>
+  </div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-sidebar" id="cartSidebar" aria-hidden="true"><div class="cart-hdr"><h2><i data-lucide="shopping-bag"></i> Cart</h2><button class="icon-btn" id="cartCloseBtn"><i data-lucide="x"></i></button></div><div class="cart-body" id="cartBody"></div><div class="cart-foot" id="cartFooter"><div class="cart-totals"><span>Total</span><span id="cartTotal">₦0</span></div><button class="btn btn-primary btn-full" id="checkoutBtn">Proceed to Checkout <i data-lucide="arrow-right"></i></button></div></aside>
+<div class="modal-overlay" id="modalOverlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><button class="modal-close icon-btn" id="modalClose"><i data-lucide="x"></i></button><div class="modal-img-wrap"><img id="modalImg" src="" alt=""></div><div class="modal-body"><p class="modal-cat" id="modalCat"></p><h3 class="modal-title" id="modalTitle"></h3><div class="modal-rating" id="modalRating"></div><div class="modal-price-row"><span class="modal-price" id="modalPrice"></span><span class="modal-old" id="modalOld"></span></div><p class="modal-desc" id="modalDesc"></p><div class="size-selector"><p class="size-label">Select Size</p><div class="size-opts" id="modalSizes" role="group"></div><p class="size-note">Custom sizing available upon request</p></div><div class="modal-actions"><button class="btn btn-primary" id="modalAddBtn">Add to Cart</button><button class="btn btn-outline" id="modalWishBtn"><i data-lucide="heart"></i> Wishlist</button></div></div></div></div>
+<div class="toast" id="toast"><i data-lucide="check-circle"></i><span id="toastMsg"></span></div>
+<a class="wa-float" href="https://wa.me/2347030000117" target="_blank" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+
+<script src="JS/data.js"></script><script src="JS/app.js"></script>
+<script>
+const CATS = [
+  { key:'kaftans',  label:'Luxury Kaftans',     desc:'Flowing, opulent kaftan silhouettes in premium fabrics.',     img:'Images/' },
+  { key:'dresses',  label:'Statement Dresses',   desc:'From sculptured lace gowns to flowy chiffon — all occasions.',img:'Images/' },
+  { key:'sets',     label:'Two-Piece Sets',      desc:'Coordinated crop and trouser or bralet and skirt pairings.',  img:'Images/' },
+  { key:'occasion', label:'Occasion Wear',       desc:'Iro & buba, evening gowns, and ceremonial pieces.',           img:'Images/' },
+  { key:'limited',  label:'Limited Collection',  desc:'Numbered, one-run pieces. When they\'re gone, they\'re gone.',img:'Images/' },
+  
+];
+
+document.addEventListener('DOMContentLoaded', async () => {
+  const all = await getProducts();
+  state.allProducts = all;
+
+  // Category cards
+  const catGrid = document.getElementById('catGrid');
+  catGrid.innerHTML = CATS.map(c => {
+    const count = all.filter(p => p.category === c.key).length;
+    return `
+      <div class="cat-card" onclick="scrollToSection('col-${c.key}')">
+        <img src="${c.img}" alt="${c.label}" onerror="this.style.opacity='0'" loading="lazy">
+        <div class="cat-card-overlay">
+          <p class="cat-card-label">${count} piece${count!==1?'s':''}</p>
+          <h3 class="cat-card-title">${c.label}</h3>
+          <p class="cat-card-count">${c.desc}</p>
+          <span class="cat-card-btn">View Category <i data-lucide="arrow-right"></i></span>
+        </div>
+      </div>`;
+  }).join('');
+
+  // Per-category rows
+  const rows = document.getElementById('collectionRows');
+  rows.innerHTML = CATS.map(c => {
+    const prods = all.filter(p => p.category === c.key);
+    return `
+      <div class="collection-section" id="col-${c.key}">
+        <div class="collection-header">
+          <div>
+            <h2>${c.label.split(' ').map((w,i)=>i===c.label.split(' ').length-1?`<em>${w}</em>`:w).join(' ')}</h2>
+            <p>${c.desc}</p>
+          </div>
+          <a href="shop.html" class="btn btn-outline">See All <i data-lucide="arrow-right"></i></a>
+        </div>
+        <div class="col-grid" id="grid-${c.key}">
+          ${prods.length ? prods.map(buildProductCard).join('') : '<p style="color:var(--stone);font-size:.9rem">No pieces in this category yet.</p>'}
+        </div>
+      </div>`;
+  }).join('');
+
+  if (window.lucide) lucide.createIcons();
+});
+
+function scrollToSection(id) {
+  document.getElementById(id)?.scrollIntoView({ behavior:'smooth', block:'start' });
+}
+</script>
+</body></html>
